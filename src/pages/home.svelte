@@ -1,7 +1,5 @@
 <script>
-    import { OpenLayersMap } from '../components'
-	const clatsop_county = [-123.75, 46.04];
-	const zoom = 9;
+    import { Login } from '../components'
 </script>
 
 <svelte:head>
@@ -9,16 +7,16 @@
 </svelte:head>
 
 <div class="Home">
-    <h1>Home is where this map is.</h1>
-    
-	<div class="mapcontainer">
-		<OpenLayersMap center={clatsop_county} zoom={zoom}/>
-	</div>
-</div>
+	<p>
+		This template is for building apps based on the <a href="https://svelte.dev">Svelte framework</a> 
+		and the <a href="https://parceljs.org">Parcel</a> build tool.
+	</p>
+	<p>
+		Try this: <code>npx degit wildsong/svelte-template-parcel <i>your_new_project_name</i>/code>
+	</p>
 
-<style>
-	.mapcontainer {
-		display: flex;
-		margin: 2px;
-	}
-</style>
+    <h1>Home is here.</h1>
+    <Login/>
+
+	<Button/>
+</div>

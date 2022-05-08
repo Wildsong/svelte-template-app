@@ -7,3 +7,8 @@ export { Header, Footer }
 
 import OpenLayersMap from "./OpenLayersMap.svelte";
 export { OpenLayersMap }
+
+import Login from "./Login.svelte";
+export { Login }
+
+
