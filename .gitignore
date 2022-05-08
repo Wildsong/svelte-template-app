@@ -4,6 +4,9 @@ build/
 dist/
 node_modules/
 
+# May contain secrets
+config.ts
+
 # Other files and folders
 package-lock.json
 

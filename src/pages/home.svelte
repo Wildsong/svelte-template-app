@@ -1,5 +1,5 @@
 <script>
-    import { Login } from '../components'
+    import { Login, Button } from '../components'
 </script>
 
 <svelte:head>
@@ -16,7 +16,7 @@
 	</p>
 
     <h1>Home is here.</h1>
-    <Login/>
 
 	<Button/>
 </div>
+

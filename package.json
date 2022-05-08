@@ -27,6 +27,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
+    "buffer": "^6.0.3",
     "eslint": "^8.7.0",
     "parcel": "^2.5.0",
     "parcel-transformer-svelte": "^1.2.3",
@@ -34,6 +35,7 @@
     "svelte-routing": "^1.6.0"
   },
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.21.0",
     "ol": "^6.12.0",
     "ol-mapbox-style": "^6.8.3"
   }
