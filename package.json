@@ -14,8 +14,7 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "test": "parcel serve test.html --open",
-    "start": "parcel serve index.html --open",
+    "start": "parcel serve --host=0.0.0.0 index.html",
     "build": "parcel build index.html",
     "clean": "rm -rf dist node_modules",
     "deploy": "rsync -av dist/* -e 'ssh -p 2000' w6gkd.w6gkd.radio:2000:docker/nginx/html"

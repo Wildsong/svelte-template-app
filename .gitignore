@@ -5,7 +5,7 @@ dist/
 node_modules/
 
 # May contain secrets
-config.ts
+auth_config.ts
 
 # Other files and folders
 package-lock.json
