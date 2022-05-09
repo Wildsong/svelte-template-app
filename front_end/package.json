@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "start": "parcel serve --host=0.0.0.0 index.html",
+    "start": "parcel serve index.html --open",
     "build": "parcel build index.html",
     "clean": "rm -rf dist node_modules",
     "deploy": "rsync -av dist/* -e 'ssh -p 2000' w6gkd.w6gkd.radio:2000:docker/nginx/html"
@@ -28,14 +28,14 @@
     "@babel/preset-env": "^7.16.11",
     "buffer": "^6.0.3",
     "eslint": "^8.7.0",
-    "parcel": "^2.5.0",
-    "parcel-transformer-svelte": "^1.2.3",
-    "svelte": "^3.0.0",
-    "svelte-routing": "^1.6.0"
+    "@parcel/config-default": "2.5.0",
+    "parcel-transformer-svelte": "^1.2.3"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.21.0",
     "ol": "^6.12.0",
-    "ol-mapbox-style": "^6.8.3"
+    "ol-mapbox-style": "^6.8.3",
+    "svelte": "^3.0.0",
+    "svelte-routing": "^1.6.0"
   }
 }

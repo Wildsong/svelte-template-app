@@ -1,0 +1,15 @@
+# NB, we need Python3 for node building
+FROM node:current-bullseye
+
+# This is only needed to build node packages, not in production.
+RUN apt-get update && \
+    apt-get install -y build-essential
+
+RUN npm install parcel -g
+
+WORKDIR /srv
+COPY start_front_end.sh /srv
+
+
+
+

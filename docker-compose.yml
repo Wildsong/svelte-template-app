@@ -1,0 +1,25 @@
+version: '3.7'
+#networks:
+#  proxy_net:
+#    name: proxy_net
+#    external: true
+
+volumes:
+  certs:
+    name: proxy_certs    
+    external: true
+
+services:
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile.test_front_end
+    ports:
+      - "9443:1234"
+    volumes:
+      - ./front_end:/srv/app:rw
+      - certs:/srv/certs:ro
+    command: ['/srv/start_front_end.sh', 'webforms.co.clatsop.or.us']
+#    networks:
+#      proxy_net:
+#        ipv4_address: ${STATIC_IP_ADDRESS}
