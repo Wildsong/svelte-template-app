@@ -9,7 +9,3 @@ RUN npm install parcel -g
 
 WORKDIR /srv
 COPY start_front_end.sh /srv
-
-
-
-

@@ -6,7 +6,7 @@ version: '3.7'
 
 volumes:
   certs:
-    name: proxy_certs    
+    name: caddy_data    
     external: true
 
 services:
@@ -19,7 +19,7 @@ services:
     volumes:
       - ./front_end:/srv/app:rw
       - certs:/srv/certs:ro
-    command: ['/srv/start_front_end.sh', 'webforms.co.clatsop.or.us']
+    command: ['/srv/start_front_end.sh', 'p3.map46.com']
 #    networks:
 #      proxy_net:
 #        ipv4_address: ${STATIC_IP_ADDRESS}
