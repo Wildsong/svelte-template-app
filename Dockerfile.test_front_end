@@ -7,5 +7,11 @@ RUN apt-get update && \
 
 RUN npm install parcel -g
 
+ARG FQDN
+ENV FQDN ${FQDN}
+
+ARG LOCN
+ENV LOCN ${LOCN}
+
 WORKDIR /srv
 COPY start_front_end.sh /srv

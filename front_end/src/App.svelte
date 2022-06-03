@@ -6,7 +6,6 @@
 	import { isAuthenticated, user } from "./store";
 
 	let auth0Client;
-	let newTask;
 
   	onMount(async () => {
 		auth0Client = await auth.createClient();
