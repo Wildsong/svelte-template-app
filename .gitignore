@@ -6,6 +6,7 @@ node_modules/
 
 # May contain secrets
 auth_config.ts
+.env
 
 # Other files and folders
 package-lock.json
