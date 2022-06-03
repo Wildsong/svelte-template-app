@@ -5,6 +5,9 @@ FROM node:current-bullseye
 RUN apt-get update && \
     apt-get install -y build-essential
 
+RUN adduser svelte
+USER svelte
+
 RUN npm install parcel -g
 
 ARG FQDN
