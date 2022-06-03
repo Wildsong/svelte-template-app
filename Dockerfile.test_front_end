@@ -7,9 +7,9 @@ RUN apt-get update && \
 
 RUN useradd -ms /bin/bash svelte
 
-RUN npm install parcel -g
-
 USER svelte
+
+RUN npm install parcel -g
 
 ARG FQDN
 ENV FQDN ${FQDN}
