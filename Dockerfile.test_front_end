@@ -9,7 +9,7 @@ RUN useradd -ms /bin/bash svelte
 
 USER svelte
 
-RUN npm install parcel -g
+RUN npm install parcel
 
 ARG FQDN
 ENV FQDN ${FQDN}
