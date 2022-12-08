@@ -1,4 +1,9 @@
 version: '3.7'
+
+#
+# This version runs in production mode and tries to recycle HTTPS certificates.
+#
+
 #networks:
 #  proxy_net:
 #    name: proxy_net
@@ -10,19 +15,23 @@ volumes:
     external: true
 
 services:
-  node:
+  svelte:
+    container_name: svelte-template
+    image: svelte-template
     build:
       context: .
       dockerfile: Dockerfile.test_front_end
       args:
         - FQDN=${FQDN}
-        - LOCN=${LOCN}
+    environment:
+      NODE_ENV: production
     ports:
       - "10443:10443"
     volumes:
-      - ./front_end:/srv/app:rw
+      - ${PWD}/auth_config.ts:/home/node/auth_config.ts:rw
+      - ${PWD}/front_end:/home/node/src:rw
       - certs:/srv/certs:ro
-    command: ['/srv/start_front_end.sh']
+
 #    networks:
 #      proxy_net:
 #        ipv4_address: ${STATIC_IP_ADDRESS}

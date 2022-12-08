@@ -1,0 +1,10 @@
+* text=auto
+
+# Don't let Windows screw up bash scripts
+*.sh text eol=lf
+
+# These are always binaries
+*.jpg binary
+*.gif binary
+*.png binary
+*.ico binary

@@ -10,4 +10,5 @@ auth_config.ts
 
 # Other files and folders
 package-lock.json
-
+yarn.lock
+yarn-error.log

@@ -5,12 +5,12 @@
   "contributors": [
     "Brian H Wilson <brian@wildsong.biz>"
   ],
-  "license": "gpl-3.0",
+  "license": "GPL-3.0",
   "keywords": [
     "svelte",
     "parcel",
     "openlayers",
-    "ol6"
+    "ol7"
   ],
   "scripts": {
     "lint": "eslint .",
@@ -21,21 +21,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:wildsong/svelte-parcel.git"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.16.12",
-    "@babel/preset-env": "^7.16.11",
-    "buffer": "^6.0.3",
-    "eslint": "^8.7.0",
-    "@parcel/config-default": "2.5.0",
-    "parcel-transformer-svelte": "^1.2.3"
+    "url": "git@github.com:Wildsong/svelte-template-app.git"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.21.0",
-    "ol": "^6.12.0",
-    "ol-mapbox-style": "^6.8.3",
-    "svelte": "^3.0.0",
-    "svelte-routing": "^1.6.0"
+    "cors": "^2.8.5",
+    "crocks": "^0.12.4",
+    "express": "^4.17.3",
+    "google-auth-library": "^7.12.0",
+    "ol": "^7.1.0",
+    "ol-mapbox-style": "^9.2.4",
+    "ramda": "^0.28.0",
+    "sharp": "^0.31.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.1",
+    "parcel-transformer-svelte": "^1.2.3",
+    "svelte": "^3.54.0",
+    "svelte-routing": "^1.6.0",
+    "typescript": "^4.9.4"
   }
 }

@@ -1,0 +1,22 @@
+version: '3.7'
+
+#
+#  This version runs in development mode.
+#
+
+services:
+  svelte:
+    container_name: svelte-template
+    image: svelte-template
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: development
+    ports:
+      - 1234:1234
+    volumes:
+      # Parcel needs to write 
+      - ${PWD}/auth_config.ts:/home/node/auth_config.ts:rw
+      - ${PWD}/front_end:/home/node/src:rw
+
